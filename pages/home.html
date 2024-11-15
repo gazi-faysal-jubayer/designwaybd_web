@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Animated Slideshow</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            width: 100%;
+            height: 100%;
+            font-family: "Poppins", Arial, sans-serif;
+            background-color: #000;
+            color: #f5f5f5;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        /* Container */
+        .container {
+            position: relative;
+            width: 100%;
+            height: 120vh;
+            overflow: hidden;
+        }
+
+        /* Heading with text shadow */
+        .page-heading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            font-size: 3em;
+            color: #f5f5f5;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            text-align: center;
+        }
+
+        /* Slideshow Container */
+        .slideshow-container {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .slideshow-container img {
+            height: 100%;              
+            width: auto;               
+            object-fit: cover;         
+            position: absolute;
+            top: 0;                    
+            left: 50%;                 
+            transform: translateX(-50%); 
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .slideshow-container img.active {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="page-heading">DESIGN WAY ENGINEERING CONSULTANT</h1>
+        <div class="slideshow-container">
+            <img src="../images/Home-Animation/1.jpg" alt="Slide 1" class="active">
+            <img src="../images/Home-Animation/2.jpg" alt="Slide 2">
+            <img src="../images/Home-Animation/3.jpg" alt="Slide 3">
+            <img src="../images/Home-Animation/4.jpg" alt="Slide 4">
+            <img src="../images/Home-Animation/5.jpg" alt="Slide 5">
+            <img src="../images/Home-Animation/6.jpg" alt="Slide 6">
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for dynamic slideshow
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.slideshow-container img');
+        const totalSlides = slides.length;
+
+        function showNextSlide() {
+            slides[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % totalSlides;
+            slides[currentIndex].classList.add('active');
+        }
+
+        // Change slide every 4 seconds
+        setInterval(showNextSlide, 4000);
+    </script>
+</body>
+</html>
