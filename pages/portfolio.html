@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Poppins", Arial, sans-serif;
+            padding: 20px;
+            margin: 0;
+            line-height: 1.8;
+            color: #fff;
+            background-color: #000;
+        }
+
+        h2 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .mb-4 {
+            margin-bottom: 1.5rem !important;
+            text-align: center;
+        }
+
+        /* Slider container */
+        .car-slider {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Wrapper for slides */
+        .cer-slides-wrapper {
+            overflow: hidden;
+            width: 100%;
+        }
+
+        /* Slides container */
+        .cer-slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        /* Slide images */
+        .cer-slides img {
+            width: 100%;
+            max-height: 90vh;
+            flex-shrink: 0;
+            object-fit: contain;
+        }
+
+        /* Buttons */
+        .slide-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: #fff;
+            font-size: 2rem;
+            padding: 0.5rem;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .prev-btn {
+            left: 10px;
+        }
+
+        .next-btn {
+            right: 10px;
+        }
+
+        .slide-btn:focus {
+            outline: none;
+        }
+
+        .slide-btn:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 class="mb-4">Portfolio</h2>
+    <div class="car-slider">
+        <button class="slide-btn prev-btn">❮</button>
+        <div class="cer-slides-wrapper">
+            <div class="cer-slides">
+                <img src="../images/Portfolio/1-cover.jpg" alt="portfolio 1">
+                <img src="../images/Portfolio/2-intro.jpg" alt="portfolio 2">
+                <img src="../images/Portfolio/3-services.jpg" alt="portfolio 3">
+                <img src="../images/Portfolio/4-certificates.jpg" alt="portfolio 4">
+                <img src="../images/Portfolio/5-certificates-2.jpg" alt="portfolio 5">
+                <img src="../images/Portfolio/6-DW-team.jpg" alt="portfolio 6">
+                <img src="../images/Portfolio/7-DW-team-2.jpg" alt="portfolio 7">
+                <img src="../images/Portfolio/8-projects.jpg" alt="portfolio 8">
+                <img src="../images/Portfolio/9-projects.jpg" alt="portfolio 9">
+                <img src="../images/Portfolio/10-projects.jpg" alt="portfolio 10">
+                <img src="../images/Portfolio/11-projects.jpg" alt="portfolio 11">
+                <img src="../images/Portfolio/12-projects.jpg" alt="portfolio 12">
+                <img src="../images/Portfolio/13-projects.jpg" alt="portfolio 13">
+                <img src="../images/Portfolio/14-projects.jpg" alt="portfolio 14">
+                <img src="../images/Portfolio/15-projects.jpg" alt="portfolio 15">
+                <img src="../images/Portfolio/16-projects.jpg" alt="portfolio 16">
+                <img src="../images/Portfolio/17-projects.jpg" alt="portfolio 17">
+                <img src="../images/Portfolio/18-projects.jpg" alt="portfolio 18">
+                <img src="../images/Portfolio/19-projects.jpg" alt="portfolio 19">
+                <img src="../images/Portfolio/20-projects.jpg" alt="portfolio 20">
+                <img src="../images/Portfolio/21-projects.jpg" alt="portfolio 21">
+                <img src="../images/Portfolio/22-projects.jpg" alt="portfolio 22">
+                <img src="../images/Portfolio/23-projects.jpg" alt="portfolio 23">
+                <img src="../images/Portfolio/24-projects.jpg" alt="portfolio 24">
+                <img src="../images/Portfolio/25-projects.jpg" alt="portfolio 25">
+                <img src="../images/Portfolio/26-projects.jpg" alt="portfolio 26">
+                <img src="../images/Portfolio/27-projects.jpg" alt="portfolio 27">
+                <img src="../images/Portfolio/Back-Cover.jpg" alt="portfolio 28">
+            </div>
+        </div>
+        <button class="slide-btn next-btn">❯</button>
+    </div>
+
+    </div>
+
+    <script>
+        // JavaScript for button-controlled slider
+        const slides = document.querySelector('.cer-slides');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+
+        let currentIndex = 0;
+
+        // Update slide position
+        const updateSlidePosition = () => {
+            const slideWidth = slides.children[0].clientWidth;
+            slides.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+        };
+
+        // Handle next button click
+        nextBtn.addEventListener('click', () => {
+            if (currentIndex < slides.children.length - 1) {
+                currentIndex++;
+                updateSlidePosition();
+            }
+        });
+
+        // Handle previous button click
+        prevBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateSlidePosition();
+            }
+        });
+
+        // Adjust slider on window resize to ensure proper positioning
+        window.addEventListener('resize', updateSlidePosition);
+    </script>
+
+
+</body>
+
+</html>
