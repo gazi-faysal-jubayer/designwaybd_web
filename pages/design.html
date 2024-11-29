@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architectural Projects</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Poppins", Arial, sans-serif;
+            padding: 20px;
+            margin: 0;
+            line-height: 1.8;
+            color: #fff;
+            background-color: #000;
+        }
+
+        .tab-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+            padding: 0 10px; /* Add horizontal padding */
+        }
+        
+        .tab {
+            flex: 0 1 auto; /* Allow tabs to shrink and grow as needed */
+            padding: 10px 15px;
+            background-color: #222;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            white-space: nowrap; /* Prevent text wrapping */
+            overflow: hidden;
+            text-overflow: ellipsis; /* Show ellipsis if text is too long */
+            max-width: 200px; /* Optional: limit tab width */
+        }
+        
+        @media (max-width: 480px) {
+            .tab-container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .tab {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 0px;
+                max-width: none;
+            }
+        }
+
+        .tab.active {
+            background-color: #555;
+        }
+
+        h1.page-title {
+            text-align: center;
+            padding: 2rem;
+            background-color: rgba(0, 0, 0, 0.7);
+            font-size: 2.5rem;
+        }
+
+        .mb-4 {
+            margin-bottom: 1.5rem !important;
+            text-align: center;
+        }
+
+        .card-container {
+            display: none;
+        }
+
+        .card-container.active {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background-color: #222;
+            color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .card-title {
+            margin: 10px 0;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .card-description {
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        /* Responsive Layout */
+        @media (max-width: 1024px) {
+            .card-container.active {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .card-container.active {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card-container.active {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="page-title">Designs</h1>
+
+    <div class="tab-container">
+        <button class="tab active" onclick="switchTab('residential')">Residentials</button>
+        <button class="tab" onclick="switchTab('factories')">Factories</button>
+        <button class="tab" onclick="switchTab('commercials')">Commercials</button>
+        <button class="tab" onclick="switchTab('duplex')">Duplex</button>
+        <button class="tab" onclick="switchTab('mosque')">Mosque</button>
+    </div>
+
+    <div id="residential-container" class="card-container active">
+
+        <div class="card">
+            <img src="../images/projects/Residentials/1.jpg" alt="Project 1">
+            <div class="card-title">Jakia Afroz & Others's Apartment</div>
+            <div class="card-description"><b>Client:</b> Jakia Afroz & Others<br>
+                <b>Details:</b> Basement +16 Storied-8942 S.ft.<br>
+                <b>Location:</b> Pallibiddyut, Ashulia, Dhaka-1344</div>
+        </div>
+        
+        <div class="card">
+            <img src="../images/projects/Residentials/AL BARAKA TOWER.jpg" alt="Project 1">
+            <div class="card-title">Al-Baraka Tower</div>
+            <div class="card-description"><b>Client:</b> MD. Shrafat Ali & Others<br>
+                <b>Details:</b> Basement +16 Storied-13, 940 S.Ft.<br>
+                <b>Location:</b> Officer's Housing, Ashulia, Dhaka-1344</div>
+        </div>
+        <div class="card">
+            <img src="../images/projects/Residentials/Hilton Tower.jpg" alt="Project 1">
+            <div class="card-title">Hilton Tower</div>
+            <div class="card-description"><b>Client:</b>Mrs. Mariam Nesa and Others<br>
+                <b>Details:</b> Basement+15 Storied, 12,000 S.Ft.<br>
+                <b>Location:</b> Officer's Housing, Ashulia, Dhaka-1344</div>
+        </div>
+        <div class="card">
+            <img src="../images/projects/Residentials/Makkah Tower.jpg" alt="Project 1">
+            <div class="card-title">Makkah Tower</div>
+            <div class="card-description"><b>Client:</b> MD. Sanaullah Mizi & Others<br>
+                <b>Details:</b> 15 Storied, 5250 S.Ft.<br>
+                <b>Location:</b> Amin Model Town, Ashulia, Dhaka-1344</div>
+        </div>
+        <div class="card">
+            <img src="../images/projects/Residentials/Lt. Col. Faizul Haque.jpg" alt="Project 1">
+            <div class="card-title">Lt. Col. Faizul Haque's Apartment</div>
+            <div class="card-description"><b>Client:</b> Lt. Col. Faizul Haque<br>
+                <b>Details:</b> 9 Storied, 2800 S.Ft.<br>
+                <b>Location:</b> DOHS-Savar Cantonment, Ashulia, Dhaka-1344</div>
+        </div>
+        <div class="card">
+            <img src="../images/projects/Residentials/Sky City.jpg" alt="Project 1">
+            <div class="card-title">Sky City</div>
+            <div class="card-description"><b>Client:</b> Abdur Rahim & Others<br>
+                <b>Details:</b> 15 Storied, 4900 S.Ft.<br>
+                <b>Location:</b> Officer's Housing, Ashulia, Dhaka-1344</div>
+        </div>
+        <div class="card">
+            <img src="../images/projects/Residentials/Paranova Paradise.jpg" alt="Project 1">
+            <div class="card-title">Paranova Paradise</div>
+            <div class="card-description"><b>Client:</b> MD. Sanaullah Mizi & Others<br>
+                <b>Details:</b> 15 Storied, 5250 S.Ft.<br>
+                <b>Location:</b> Amin Model Town, Ashulia, Dhaka-1344</div>
+        </div>
+        <div class="card">
+            <img src="../images/projects/Residentials/Jam-Jam Tower.jpg" alt="Project 1">
+            <div class="card-title">Jam-Jam Tower</div>
+            <div class="card-description"><b>Client:</b> Shahadat Hossen<br>
+                <b>Details:</b> 12 Storied, 7800 S.Ft.<br>
+                <b>Location:</b> Baipail, Ashulia, Dhaka-1344</div>
+        </div>
+        <div class="card">
+            <img src="../images/projects/Residentials/Green City.jpg" alt="Project 1">
+            <div class="card-title">Green City</div>
+            <div class="card-description"><b>Client:</b> Mobarak Hossen & Others<br>
+                <b>Details:</b> 12 Storied, 4000 S.Ft.<br>
+                <b>Location:</b> Pandhoa, Ashulia, Dhaka-1344</div>
+        </div>
+        <div class="card">
+            <img src="../images/projects/Residentials/MD. Mahafuzur Rahman.jpg" alt="Project 1">
+            <div class="card-title">MD. Mahafuzur Rahman's Apartment</div>
+            <div class="card-description"><b>Client:</b> MD. Mahafuzur Rahman<br>
+                <b>Details:</b> 15 Storied, 4000 S.Ft.<br>
+                <b>Location:</b> Kabarsthan Road, Ashulia, Dhaka-1344</div>
+        </div>
+        <div class="card">
+            <img src="../images/projects/Residentials/Bandhan Nibash.jpg" alt="Project 1">
+            <div class="card-title">Bandhan Nibash</div>
+            <div class="card-description"><b>Client:</b> Md. Shamsuzzaman & Others<br>
+                <b>Details:</b> Basement+15 Storied, 4350 S.Ft.<br>
+                <b>Location:</b> Rupayon Housing, Ashulia, Dhaka-1344</div>
+        </div>
+        <div class="card">
+            <img src="../images/projects/Residentials/BORHAN UDDIN.jpg" alt="Project 1">
+            <div class="card-title">Borhan Uddin's Apartment</div>
+            <div class="card-description"><b>Client:</b> Borhan Uddin<br>
+                <b>Details:</b> 12 Storied, 3350 S.Ft.<br>
+                <b>Location:</b> Amin Model Town, Ashulia, Dhaka-1344</div>
+        </div>
+        <div class="card">
+            <img src="../images/projects/Residentials/Mahabubur Rahman Khan & Others.jpg" alt="Project 1">
+            <div class="card-title">Mahabubur Rahman Khan & Others's Apartment</div>
+            <div class="card-description"><b>Client:</b> Mahabubur Rahman Khan & Others<br>
+                <b>Details:</b> 13 Storied, 3700 S.Ft.<br>
+                <b>Location:</b> Green City, Ashulia, Dhaka-1344</div>
+        </div>
+        <div class="card">
+            <img src="../images/projects/Residentials/MAKSUDUL GONG .jpg" alt="Project 1">
+            <div class="card-title">Maksudul & others's Apartment</div>
+            <div class="card-description"><b>Client:</b> Maksudul & others<br>
+                <b>Details:</b> 13 Storied, 6000 S.ft.<br>
+                <b>Location:</b> Bashundhara, Ashulia, Dhaka-1344</div>
+        </div>
+        <div class="card">
+            <img src="../images/projects/Residentials/Afaj Uddin.jpg" alt="Project 1">
+            <div class="card-title">Afaj Uddin's Apartment</div>
+            <div class="card-description"><b>Client:</b> Afaj Uddin<br>
+                <b>Details:</b> 12 Storied, 6000 S.Ft.<br>
+                <b>Location:</b> Gazirchat, Ashulia, Dhaka-1344</div>
+        </div>
+        <div class="card">
+            <img src="../images/projects/Residentials/Green Tower.jpg" alt="Project 1">
+            <div class="card-title">Green Tower</div>
+            <div class="card-description"><b>Client:</b> Jasim Uddin & Others<br>
+                <b>Details:</b> 12 Storied, 3150 S.Ft.<br>
+                <b>Location:</b> Amin Model Town, Ashulia, Dhaka-1344</div>
+        </div>
+        <div class="card">
+            <img src="../images/projects/Residentials/F.M. Newaz Uddin.jpg" alt="Project 1">
+            <div class="card-title">F.M. Newaz Uddin's Apartment</div>
+            <div class="card-description"><b>Client:</b> F.M. Newaz Uddin<br>
+                <b>Details:</b> 13 Storied, 6000 S.Ft.<br>
+                <b>Location:</b> Baipail, Bashundhara, Ashulia, Dhaka-1344</div>
+        </div>
+        <div class="card">
+            <img src="../images/projects/Residentials/Falguni Tower.jpg" alt="Project 1">
+            <div class="card-title">Falguni Tower</div>
+            <div class="card-description"><b>Client:</b> Ali Akbar & Others<br>
+                <b>Details:</b> 12 Storied, 3275 S.Ft.<br>
+                <b>Location:</b> Falguni Housing, Ashulia, Dhaka-1344</div>
+        </div>
+        
+        <div class="card">
+            <img src="../images/projects/Residentials/Mizanur rahman & others.jpg" alt="Project 1">
+            <div class="card-title">Mizanur rahman & others's Apartment</div>
+            <div class="card-description"><b>Client:</b> Mizanur rahman & others<br>
+                <b>Details:</b> 12 Storied, 3900 S.Ft.<br>
+                <b>Location:</b> Pandhoa, Ashulia, Dhaka-1344</div>
+        </div>
+        
+        <div class="card">
+            <img src="../images/projects/Residentials/S.K. Properties.jpg" alt="Project 1">
+            <div class="card-title">S.K. Properties</div>
+            <div class="card-description"><b>Client:</b> MD. Shoraf Hossen<br>
+                <b>Details:</b> 10 Storied, 3500 S.Ft.<br>
+                <b>Location:</b> Nirman Housing, Ashulia, Dhaka-1344</div>
+        </div>
+        
+        <div class="card">
+            <img src="../images/projects/Residentials/Akata Tower.jpg" alt="Project 1">
+            <div class="card-title">Akata Tower</div>
+            <div class="card-description"><b>Client:</b> Md. Alam Vuyan & Others<br>
+                <b>Details:</b> 13 Stories, 4000 S.Ft.<br>
+                <b>Location:</b> Amin Model Town, Ashulia, Dhaka-1344</div>
+        </div>
+        
+        <div class="card">
+            <img src="../images/projects/Residentials/Model City.jpg" alt="Project 1">
+            <div class="card-title">Model City</div>
+            <div class="card-description"><b>Client:</b> Md. Abdul Hannan<br>
+                <b>Details:</b> 11 Stories, 2700 S.Ft.<br>
+                <b>Location:</b> Amin Model Town, Ashulia, Dhaka-1344</div>
+        </div>
+        
+        <div class="card">
+            <img src="../images/projects/Residentials/Abu Sayem & Others.jpg" alt="Project 1">
+            <div class="card-title">Abu Sayem & Others's Apartment</div>
+            <div class="card-description"><b>Client:</b> Abu Sayem & Others<br>
+                <b>Details:</b> 10 Stories, 3700 S.Ft.<br>
+                <b>Location:</b> Niribili, Ashulia, Dhaka-1344</div>
+        </div>
+        
+        <div class="card">
+            <img src="../images/projects/Residentials/Abu Sayed.jpg" alt="Project 1">
+            <div class="card-title">Abu Sayed's Apartment</div>
+            <div class="card-description"><b>Client:</b> Abu Sayed<br>
+                <b>Details:</b> 10 Storied, 4500 S.ft.<br>
+                <b>Location:</b> Bogura Sadar</div>
+        </div>
+        
+        <div class="card">
+            <img src="../images/projects/Residentials/Sotota Tower.jpg" alt="Project 1">
+            <div class="card-title">Satota Tower</div>
+            <div class="card-description"><b>Client:</b> Md.Alam Vuyan & Others<br>
+                <b>Details:</b> 15 Storied, 4000 S.Ft.<br>
+                <b>Location:</b> Amin Model Town, Ashulia, Dhaka-1344</div>
+        </div>
+        
+        <div class="card">
+            <img src="../images/projects/Residentials/Hazi. MD. Tafiqul Islam.jpg" alt="Project 1">
+            <div class="card-title">Hazi. MD. Tafiqul Islam's Apartment</div>
+            <div class="card-description"><b>Client:</b> Hazi. MD. Tafiqul Islam<br>
+                <b>Details:</b> 10 Storied, 2900  S.Ft.<br>
+                <b>Location:</b> Baipail, Bashundhara, Ashulia, Dhaka-1344</div>
+        </div>
+        
+        <div class="card">
+            <img src="../images/projects/Residentials/Ten Tower.jpg" alt="Project 1">
+            <div class="card-title">Ten Tower</div>
+            <div class="card-description"><b>Client:</b> MD. Anwar Hossain & Others<br>
+                <b>Details:</b> 11 Storied, 3100 S.Ft.<br>
+                <b>Location:</b> Dendabor Notun Para, Ashulia, Dhaka-1344</div>
+        </div>
+        
+        <div class="card">
+            <img src="../images/projects/Residentials/MD. Tajul Kabir & Others.jpg" alt="Project 1">
+            <div class="card-title">MD. Tajul Kabir & Others's Apartment</div>
+            <div class="card-description"><b>Client:</b> MD. Tajul Kabir & Others<br>
+                <b>Details:</b> 10 Storied, 3200 S.Ft.<br>
+                <b>Location:</b> Falguni Housing, Ashulia, Dhaka-1344</div>
+        </div>
+        
+        <div class="card">
+            <img src="../images/projects/Residentials/MD. Nazrul Islam & Others.jpg" alt="Project 1">
+            <div class="card-title">MD. Nazrul Islam & Others's Apartment</div>
+            <div class="card-description"><b>Client:</b> MD. Nazrul Islam & Others<br>
+                <b>Details:</b> 10 Storied, 3700 S.Ft.<br>
+                <b>Location:</b> Baipail, Ashulia, Dhaka-1344</div>
+        </div>
+        
+        <div class="card">
+            <img src="../images/projects/Residentials/Aktel Tower.jpg" alt="Project 1">
+            <div class="card-title">Aktel Tower</div>
+            <div class="card-description"><b>Client:</b> Habibur Rahman<br>
+                <b>Details:</b> 12 Storied, 5500 S.Ft.<br>
+                <b>Location:</b> Niribili, Ashulia, Dhaka-1344</div>
+        </div>
+        
+        <div class="card">
+            <img src="../images/projects/Residentials/Osman Gony.jpg" alt="Project 1">
+            <div class="card-title">Osman Gony's Apartment</div>
+            <div class="card-description"><b>Client:</b> Osman Gony<br>
+                <b>Details:</b> 8 Storied, 3000 S.Ft.<br>
+                <b>Location:</b> Palashbari, Ashulia, Dhaka-1344</div>
+        </div>
+        
+        <div class="card">
+            <img src="../images/projects/Residentials/Wahidul  Islam 3d 01.jpg" alt="Project 1">
+            <div class="card-title">Wahidul  Islam's Apartment</div>
+            <div class="card-description"><b>Client:</b> Wahidul  Islam<br>
+                <b>Details:</b> 12 Storied, 3600 S.ft.<br>
+                <b>Location:</b> Bexmimco, Ashulia, Dhaka-1344</div>
+        </div>
+        
+        <div class="card">
+            <img src="../images/projects/Residentials/Shoriful Islam Gong- 3D.jpg" alt="Project 1">
+            <div class="card-title">Shoriful Islam & others's Apartment</div>
+            <div class="card-description"><b>Client:</b> Shoriful Islam & others<br>
+                <b>Details:</b> 15 Storied, 8500 S.ft.<br>
+                <b>Location:</b> Baipail, Bashundhara, Ashulia, Dhaka-1344</div>
+        </div>
+        
+        <div class="card">
+            <img src="../images/projects/Residentials/Akter Hossain- 3D 01.jpg" alt="Project 1">
+            <div class="card-title">Akter Hossain's Apartment</div>
+            <div class="card-description"><b>Client:</b> Akter Hossain<br>
+                <b>Details:</b> 10 Storied, 3700 S.ft.<br>
+                <b>Location:</b> Berun Manikganj Para, Ashulia, Dhaka-1344</div>
+        </div>
+        
+        <div class="card">
+            <img src="../images/projects/Residentials/An Nur(Amin model towen)  3D  01.jpg" alt="Project 1">
+            <div class="card-title">An Nur(Amin model towen)</div>
+            <div class="card-description"><b>Client:</b> Habibur Rahman<br>
+                <b>Details:</b> 14 Storied, 3700 S.ft.<br>
+                <b>Location:</b> Baipail, Bashundhara, Ashulia, Dhaka-1344</div>
+        </div>
+        
+        <div class="card">
+            <img src="../images/projects/Residentials/Moyazzem Hossain-3D 02.jpg" alt="Project 1">
+            <div class="card-title">Moyazzem Hossain's Apartment</div>
+            <div class="card-description"><b>Client:</b> Moyazzem Hossain<br>
+                <b>Details:</b> 9 Storied, 2200 S.ft.<br>
+                <b>Location:</b> Kuturia Nikkon Housing, Ashulia, Dhaka-1344</div>
+        </div>
+        
+        <div class="card">
+            <img src="../images/projects/Residentials/DIMOND TOWER  3D 03.jpg" alt="Project 1">
+            <div class="card-title">Diamond Tower</div>
+            <div class="card-description"><b>Client:</b> MD. Hazrat Ali & others<br>
+                <b>Details:</b> 15 Storied, 3900 S.ft.<br>
+                <b>Location:</b> Pallibiddyut, Ashulia, Dhaka-1344</div>
+        </div>
+        
+        <div class="card">
+            <img src="../images/projects/Residentials/Selim Reza Gong.jpg" alt="Project 1">
+            <div class="card-title">Selim Reza & others's Apartment</div>
+            <div class="card-description"><b>Client:</b> Selim Reza & others<br>
+                <b>Details:</b> 15 Storied, 5300 S.ft.<br>
+                <b>Location:</b> Baipail, Bashundhara, Ashulia, Dhaka-1344</div>
+        </div>
+        
+    </div>
+
+    <div id="factories-container" class="card-container">
+        <div class="card">
+            <img src="../images/projects/Factories/NILA PACKAGING & ACCESSORIES LTD.jpg" alt="Project 1">
+            <div class="card-title">Nila Packaging and Accessories LTD.</div>
+            <div class="card-description"><b>Client:</b> MD. Masudur Rahman<br>
+                <b>Details:</b> 10 Storied, 42,000 S.Ft.(Per Floor)<br>
+                <b>Location:</b> Jamgora, Ashulia, Dhaka-1344</div>
+        </div>
+        <div class="card">
+            <img src="../images/projects/Factories/New Time.jpg" alt="Project 1">
+            <div class="card-title">New Time</div>
+            <div class="card-description"><b>Client:</b> Fazlul Haque<br>
+                <b>Details:</b> 7 Storied, 7500 S.Ft.<br>
+                <b>Location:</b> Shripur, Ashulia, Dhaka-1344</div>
+        </div>   
+        <div class="card">
+            <img src="../images/projects/Factories/Tag & Pag Factory.jpg" alt="Project 1">
+            <div class="card-title">Tag & Pag Factory</div>
+            <div class="card-description"><b>Client:</b> Ibrahim Islam Sumon<br>
+                <b>Details:</b> 6 Storied, 10000 S.Ft.<br>
+                <b>Location:</b> </div>
+        </div>
+        <div class="card">
+            <img src="../images/projects/Factories/ACTA Dhaka LTD..jpg" alt="Project 1">
+            <div class="card-title">ACTA Dhaka LTD.</div>
+            <div class="card-description"><b>Client:</b> Md. Harun-ur-Rashid<br>
+                <b>Details:</b> 6 Storied, 42000 S.Ft. (Per Floor)<br>
+                <b>Location:</b> Sugandhi, Shripur, Ashulia, Dhaka-1344</div>
+        </div>
+        <div class="card">
+            <img src="../images/projects/Factories/ABDUS SALAM (ARIARAR MORE)1 .jpg" alt="Project 1">
+            <div class="card-title">Abdus Salam's Factory</div>
+            <div class="card-description"><b>Client:</b> Abdus Salam<br>
+                <b>Location:</b> Ariarer More, Baipail, Ashulia, Dhaka-1344</div>
+        </div>
+        <div class="card">
+            <img src="../images/projects/Factories/HARUN OR RASHID.jpg" alt="Project 1">
+            <div class="card-title">Md. Harun-or-Rashid's Factory</div>
+            <div class="card-description"><b>Client:</b> Md. Harun-or-Rashid<br>
+                <b>Details:</b> 8 Storied, 10,000 S.ft.<br>
+                <b>Location:</b> Jamgora, Ashulia, Dhaka-1344</div>
+        </div>
+    </div>
+
+    <div id="commercials-container" class="card-container">
+        <div class="card">
+            <img src="../images/projects/Commercials/Munshi Market.jpg" alt="Project 1">
+            <div class="card-title">Munshi Market</div>
+            <div class="card-description"><b>Client:</b> MD. Abdur Razzak Munshi<br>
+                <b>Details:</b> 10 Storied, 5000 S.Ft.<br>
+                <b>Location:</b> Charabag Stand, Ashulia, Dhaka-1344</div>
+        </div>
+        <div class="card">
+            <img src="../images/projects/Commercials/Md. Saiful Islam.jpg" alt="Project 1">
+            <div class="card-title">RMST Tower</div>
+            <div class="card-description"><b>Client:</b> Md. Saiful Islam<br>
+                <b>Details:</b> 13 Storied, 9950 S.Ft.<br>
+                <b>Location:</b> Baipail, Ashulia, Savar, Dhaka-1344</div>
+        </div>
+        <div class="card">
+            <img src="../images/projects/Commercials/Shrishty Central School & College.jpg" alt="Project 1">
+            <div class="card-title">Shrishty Central School & College</div>
+            <div class="card-description"><b>Client:</b> Dr. Shariful Islam Ripon<br>
+                <b>Details:</b> 10 Storied, 3600 S.Ft.<br>
+                <b>Location:</b> Baipail, Ashulia, Dhaka-1344</div>
+        </div>
+        <div class="card">
+            <img src="../images/projects/Commercials/Sristy Group 3D 02.jpg" alt="Project 1">
+            <div class="card-title">Shrishty Central School & College</div>
+            <div class="card-description"><b>Client:</b> Dr. Shariful Islam Ripon<br>
+                <b>Details:</b> 7 Storied, 6500 S.Ft.<br>
+                <b>Location:</b> Tangail Sadar, Tangail</div>
+        </div>
+        <div class="card">
+            <img src="../images/projects/Commercials/BADSHA TOWER.JPG" alt="Project 1">
+            <div class="card-title">Badshah Tower</div>
+            <div class="card-description"><b>Client:</b> MD. Sultan Munshi<br>
+                <b>Details:</b> 10 Storied, 7800 S.Ft.<br>
+                <b>Location:</b> Pollibydut, Ashulia, Dhaka-1344</div>
+        </div>
+        <div class="card">
+            <img src="../images/projects/Commercials/Abdul Hai.jpg" alt="Project 1">
+            <div class="card-title">Abdul Hai's Tower</div>
+            <div class="card-description"><b>Client:</b> Abdul Hai<br>
+                <b>Details:</b> 10 Storied, 3000 S.ft.<br>
+                <b>Location:</b> Pallibiddyut Stand, Ashulia, Dhaka-1344</div>
+        </div>
+        <div class="card">
+            <img src="../images/projects/Commercials/Al Aksha Tower.jpg" alt="Project 1">
+            <div class="card-title">Al Aksha Tower</div>
+            <div class="card-description"><b>Client:</b> Biplob & others<br>
+                <b>Details:</b> 17 Storied, 21,780 S.ft.<br>
+                <b>Location:</b> Balibhadra, Ashulia, Dhaka-1344</div>
+        </div>
+    </div>
+
+    <div id="duplex-container" class="card-container">
+        <div class="card">
+            <img src="../images/projects/duplex/Bhuban Master.jpg" alt="Project 1">
+            <div class="card-title">Bhuban Master's Apartment</div>
+            <div class="card-description"><b>Client:</b> Bhuban Master<br>
+                <b>Details:</b> 5 Storied, 3000 S.Ft.<br>
+                <b>Location:</b> Uttar Dendabor, Ashulia, Dhaka-1344</div>
+        </div>
+        <div class="card">
+            <img src="../images/projects/duplex/Sirajul Islam.jpg" alt="Project 1">
+            <div class="card-title">Sirajul Islam's Apartment</div>
+            <div class="card-description"><b>Client:</b> Sirajul Islam<br>
+                <b>Details:</b> 2 Storied Duplex, 2800 S.Ft.<br>
+                <b>Location:</b> Pandhoa, Ashulia, Dhaka-1344</div>
+        </div>
+        <div class="card">
+            <img src="../images/projects/duplex/MD. Sumon.jpg" alt="Project 1">
+            <div class="card-title">MD. Sumon's Apartment</div>
+            <div class="card-description"><b>Client:</b> MD. Sumon<br>
+                <b>Details:</b> 2 Storied Duplex, 3000  S.Ft.<br>
+                <b>Location:</b> Zirani, Ashulia, Dhaka-1344</div>
+        </div>
+
+        <div class="card">
+            <img src="../images/projects/duplex/ALLHAZ RIPON .jpg" alt="Project 1">
+            <div class="card-title">Alhaz Ripon's Apartment</div>
+            <div class="card-description"><b>Client:</b> Alhaz Ripon<br>
+                <b>Details:</b> 3 Storied-2200 S.ft.<br>
+                <b>Location:</b> Chakolgram, Nayarhat, Dhaka</div>
+        </div>
+        
+        <div class="card">
+            <img src="../images/projects/duplex/Forid Mirzapur.jpg" alt="Project 1">
+            <div class="card-title">Forid's Apartment</div>
+            <div class="card-description"><b>Client:</b> Forid<br>
+                <b>Details:</b> 2 Storied, 2000 S.ft.<br>
+                <b>Location:</b> Mirzapur, Tangail</div>
+        </div>
+        
+        <div class="card">
+            <img src="../images/projects/duplex/SUVASIS.jpg" alt="Project 1">
+            <div class="card-title">Shuvasish's Apartment</div>
+            <div class="card-description"><b>Client:</b> Shuvasish<br>
+                <b>Details:</b> 2 Storied, 2600 S.ft.<br>
+                <b>Location:</b> Nawabpur, Dhaka</div>
+        </div>
+        
+        <div class="card">
+            <img src="../images/projects/duplex/Zakaria Hossain-sirajganj.jpg" alt="Project 1">
+            <div class="card-title">Zakaria Hossain's Apartment</div>
+            <div class="card-description"><b>Client:</b> Zakaria Hossain<br>
+                <b>Details:</b> 2 Storied, 2000 S.ft.<br>
+                <b>Location:</b> Ullahpara, Sirajganj</div>
+        </div>
+        
+    </div>
+
+    <div id="mosque-container" class="card-container">
+        <div class="card">
+            <img src="../images/projects/mosque/4.jpg" alt="Project 1">
+            <div class="card-title">Masjid-E-Rabeya</div>
+            <div class="card-description"><b>Client:</b> Mohammad Alauddin<br>
+                <b>Details:</b> 15 Bigha, Masque with 233 Gambuj, Graveyard, Old home, Eye hospital for free treatment, orphanage<br>
+                <b>Location:</b> Dhamrai</div>
+        </div>
+        <div class="card">
+            <img src="../images/projects/mosque/Diarapara Jame Mosque.jpg" alt="Project 1">
+            <div class="card-title">Diarapara Jame Mosque</div>
+            <div class="card-description">
+                <b>Details:</b> 2 Storied, 2000 S.Ft.<br>
+                <b>Location:</b> Diarapara, Natore</div>
+        </div>
+        <div class="card">
+            <img src="../images/projects/mosque/Hasaigari Mosque.jpg" alt="Project 1">
+            <div class="card-title">Hasaigari Mosque</div>
+            <div class="card-description">
+                <b>Details:</b> 2 Storied<br>
+                <b>Location:</b> Hasaigari, Naogaon</div>
+        </div>
+        <div class="card">
+            <img src="../images/projects/mosque/KHAKEKUZZAMAN MOSQUE.jpg" alt="Project 1">
+            <div class="card-title">KHAKEKUZZAMAN MOSQUE</div>
+            <div class="card-description">
+                <b>Details:</b> 2528.46 S.Ft.<br>
+                <b>Location:</b> Sikderbug</div>
+        </div>
+        <div class="card">
+            <img src="../images/projects/mosque/MA JAME MOSQUE.jpg" alt="Project 1">
+            <div class="card-title">MA JAME MOSQUE</div>
+            <div class="card-description">
+                <b>Details:</b> 5 Storied, 1744.33 SFT<br>
+                <b>Location:</b> NICHINTA PUR</div>
+        </div>
+        <div class="card">
+            <img src="../images/projects/mosque/BAITUL SATTAR .jpg" alt="Project 1">
+            <div class="card-title">BAITUL SATTAR</div>
+            <div class="card-description">
+                <b>Details:</b> 2 Storied, 2000 S.Ft.<br>
+                <b>Location:</b> Barisal</div>
+        </div>
+        <div class="card">
+            <img src="../images/projects/mosque/Shikdarbag Mosque.jpg" alt="Project 1">
+            <div class="card-title">Shikdarbag Mosque</div>
+            <div class="card-description">
+                <b>Details:</b> 5 Storied, 3200 S.Ft.<br>
+                <b>Location:</b> Shikdarbag, Dhalpur, Ashulia, Dhaka-1344</div>
+        </div>
+    </div>
+
+    <script>
+        function switchTab(tab) {
+            // Remove active class from all tabs and containers
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.card-container').forEach(c => c.classList.remove('active'));
+
+            // Add active class to selected tab and container
+            document.querySelector(`.tab[onclick="switchTab('${tab}')"]`).classList.add('active');
+            document.getElementById(`${tab}-container`).classList.add('active');
+        }
+    </script>
+</body>
+</html>

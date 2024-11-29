@@ -52,8 +52,7 @@
         /* Grid layout for cards */
         .card-container {
             display: grid;
-            grid-template-columns: repeat(8, 1fr);
-            /* 8 cards per row */
+            grid-template-columns: repeat(5, 1fr);
             gap: 20px;
             margin-top: 40px;
         }
@@ -65,11 +64,41 @@
             border-radius: 10px;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        /* Prominent cards at the top */
+        .card.prominent {
+            grid-column: span 5;
+            /* Span 4 columns instead of 1 */
+            display: flex;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .card.prominent img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-right: 20px;
+            object-fit: top;
+        }
+
+        .card.prominent .card-content {
+            text-align: left;
         }
 
         .card img {
-            max-width: 100%;
+            width: 100%;
             border-radius: 8px;
+            object-fit: cover;
+    object-position: top;
+    aspect-ratio: 1 / 1;
         }
 
         .card-title {
@@ -87,21 +116,32 @@
         @media (max-width: 1024px) {
             .card-container {
                 grid-template-columns: repeat(4, 1fr);
-                /* 4 cards per row for tablets */
+            }
+
+            .card.prominent {
+                grid-column: span 4;
             }
         }
 
         @media (max-width: 768px) {
             .card-container {
                 grid-template-columns: repeat(3, 1fr);
-                /* 3 cards per row for phones */
+            }
+
+            .card.prominent {
+                grid-column: span 3;
+                flex-direction: column;
+                align-items: center;
             }
         }
 
         @media (max-width: 480px) {
             .card-container {
                 grid-template-columns: repeat(2, 1fr);
-                /* 2 cards per row for smaller phones */
+            }
+
+            .card.prominent {
+                grid-column: span 2;
             }
         }
 
@@ -222,88 +262,140 @@
 
     <h2 class="mb-4">DW Team</h2>
     <div class="card-container">
+        <div class="card prominent">
+            <img src="../images/Images-DW team/Chairman.jpg" alt="Abdur Razzaque">
+            <div class="card-content">
+                <div class="card-title">Mrs. Mariam Islam</div>
+                <div class="card-description">Chairman,<br>
+                    B.A. in Political Science, N.U.
+                </div>
+
+            </div>
+        </div>
+        <div class="card prominent">
+            <img src="../images/Images-DW team/2.jpg" alt="Another Key Member">
+            <div class="card-content">
+                <div class="card-title">Engr. MD. Rabiul Islam</div>
+                <div class="card-description">Managing Director,<br>
+                    Diploma in Civil, R.P.I<br>
+                    IDEB-M-30506 RAJUK No-DCE-07
+                </div>
+            </div>
+        </div>
         <!-- Dynamic Card Template -->
         <div class="card">
-            <img src="../images/Images-DW team/Abdur Razzaque.jpg" alt="Project 1">
-            <div class="card-title">Project 1</div>
-            <div class="card-description">A brief description of Project 1.</div>
+            <img src="../images/Images-DW team/peng.jpg" alt="Project 1">
+            <div class="card-title">Engr. Abdur Rashid Khan, PEng.</div>
+            <div class="card-description">Chief Engineer,<br>
+                B.Sc. in Civil, BUET <br>
+                Life Fellow, IEB (F/7230), PEng.-01/0171
+            </div>
         </div>
+
         <div class="card">
             <img src="../images/Images-DW team/Abdur Razzaque.jpg" alt="Project 1">
-            <div class="card-title">Project 1</div>
-            <div class="card-description">A brief description of Project 1.</div>
+            <div class="card-title">Engr. MD. A. Razzaque</div>
+            <div class="card-description">Chief in Design and Analysis,<br>
+                B.Sc. in Civil, KUET<br>MIEB-M/41196
+            </div>
         </div>
+
         <div class="card">
-            <img src="../images/Images-DW team/Abdur Razzaque.jpg" alt="Project 1">
-            <div class="card-title">Project 1</div>
-            <div class="card-description">A brief description of Project 1.</div>
+            <img src="../images/Images-DW team/Kamruzzaman.jpg" alt="Project 1">
+            <div class="card-title">Engr. MD. Kamruzzaman</div>
+            <div class="card-description">Senior Project Engineer,,<br>
+                B.Sc. in Civil, S.U
+            </div>
         </div>
+
         <div class="card">
-            <img src="../images/Images-DW team/Abdur Razzaque.jpg" alt="Project 1">
-            <div class="card-title">Project 1</div>
-            <div class="card-description">A brief description of Project 1.</div>
+            <img src="../images/Images-DW team/Faruk.jpg" alt="Project 1">
+            <div class="card-title">Arc. Omar Faruk</div>
+            <div class="card-description">Architectural Engineer,<br>
+                Diploma in Architecture, B.P.I.
+            </div>
         </div>
+
         <div class="card">
-            <img src="../images/Images-DW team/Abdur Razzaque.jpg" alt="Project 1">
-            <div class="card-title">Project 1</div>
-            <div class="card-description">A brief description of Project 1.</div>
+            <img src="../images/Images-DW team/rohit (1).jpg" alt="Project 1">
+            <div class="card-title">Rohit Das</div>
+            <div class="card-description">Work Coordinator,<br>
+                B.Bs. in T.G.C.<br>Drafting Training, D.P.
+            </div>
         </div>
+
         <div class="card">
-            <img src="../images/Images-DW team/Abdur Razzaque.jpg" alt="Project 1">
-            <div class="card-title">Project 1</div>
-            <div class="card-description">A brief description of Project 1.</div>
+            <img src="../images/Images-DW team/Habib.jpg" alt="Project 1">
+            <div class="card-title">Engr. Habibur Rahman</div>
+            <div class="card-description">Drafting Engineer,<br>
+                Diploma in Civil, N.P.I
+            </div>
         </div>
+
         <div class="card">
-            <img src="../images/Images-DW team/Abdur Razzaque.jpg" alt="Project 1">
-            <div class="card-title">Project 1</div>
-            <div class="card-description">A brief description of Project 1.</div>
+            <img src="../images/Images-DW team/Omar.jpg" alt="Project 1">
+            <div class="card-title">Engr. Omar Siddik</div>
+            <div class="card-description">Drafting Engineering,<br>
+                Diploma in Civil, R.P.I.
+            </div>
         </div>
+
         <div class="card">
-            <img src="../images/Images-DW team/Abdur Razzaque.jpg" alt="Project 1">
-            <div class="card-title">Project 1</div>
-            <div class="card-description">A brief description of Project 1.</div>
+            <img src="../images/Images-DW team/10.jpg" alt="Project 1">
+            <div class="card-title">Engr. Md. Shohag</div>
+            <div class="card-description">Electrical Engineer<br>
+                M.Sc. Engineer ( EEE) (IU)<br>IDEB-M 54878
+            </div>
         </div>
+
         <div class="card">
-            <img src="../images/Images-DW team/Abdur Razzaque.jpg" alt="Project 1">
-            <div class="card-title">Project 1</div>
-            <div class="card-description">A brief description of Project 1.</div>
+            <img src="../images/Images-DW team/11.jpg" alt="Project 1">
+            <div class="card-title">Mustafizur Rahman Mustaq</div>
+            <div class="card-description">Plumbing Designer<br>
+                Diploma in Civil, P.P.I.
+            </div>
         </div>
+
         <div class="card">
-            <img src="../images/Images-DW team/Abdur Razzaque.jpg" alt="Project 1">
-            <div class="card-title">Project 1</div>
-            <div class="card-description">A brief description of Project 1.</div>
+            <img src="../images/Images-DW team/12.jpg" alt="Project 1">
+            <div class="card-title">Engr. Monjurul Amin</div>
+            <div class="card-description">Site Engineer<br>
+                Diploma in Civil, B.P.I.
+            </div>
         </div>
+
         <div class="card">
-            <img src="../images/Images-DW team/Abdur Razzaque.jpg" alt="Project 1">
-            <div class="card-title">Project 1</div>
-            <div class="card-description">A brief description of Project 1.</div>
+            <img src="../images/Images-DW team/13.jpg" alt="Project 1">
+            <div class="card-title">Engr. Md. Goljar Hossain</div>
+            <div class="card-description">Site Engineer<br>
+                B.Sc. in Civil, C.U.
+            </div>
         </div>
+
         <div class="card">
-            <img src="../images/Images-DW team/Abdur Razzaque.jpg" alt="Project 1">
-            <div class="card-title">Project 1</div>
-            <div class="card-description">A brief description of Project 1.</div>
+            <img src="../images/Images-DW team/14.jpg" alt="Project 1">
+            <div class="card-title">Engr. Md. Rasel Haque</div>
+            <div class="card-description">Site Engineer<br>
+                Diploma in Civil, D.P.I.
+            </div>
         </div>
+
         <div class="card">
-            <img src="../images/Images-DW team/Abdur Razzaque.jpg" alt="Project 1">
-            <div class="card-title">Project 1</div>
-            <div class="card-description">A brief description of Project 1.</div>
+            <img src="../images/Images-DW team/15.jpg" alt="Project 1">
+            <div class="card-title">Engr. Abdul Barik</div>
+            <div class="card-description">Digital Surveyor<br>
+                Diploma in Civil, S.U.
+            </div>
         </div>
+
         <div class="card">
-            <img src="../images/Images-DW team/Abdur Razzaque.jpg" alt="Project 1">
-            <div class="card-title">Project 1</div>
-            <div class="card-description">A brief description of Project 1.</div>
+            <img src="../images/Images-DW team/16.jpg" alt="Project 1">
+            <div class="card-title">Md. Sajib</div>
+            <div class="card-description">Operator
+            </div>
         </div>
-        <div class="card">
-            <img src="../images/Images-DW team/Abdur Razzaque.jpg" alt="Project 1">
-            <div class="card-title">Project 1</div>
-            <div class="card-description">A brief description of Project 1.</div>
-        </div>
-        <div class="card">
-            <img src="../images/Images-DW team/Abdur Razzaque.jpg" alt="Project 1">
-            <div class="card-title">Project 1</div>
-            <div class="card-description">A brief description of Project 1.</div>
-        </div>
-        <!-- Repeat the above block for additional cards dynamically -->
+
+
     </div>
 
     <script>
