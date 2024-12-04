@@ -86,8 +86,8 @@
                     slides.style.transform = `translateY(${offset}vh)`;
                 } else {
                     // For desktop, slide horizontally
-                    const offset = currentIndex * -80; // Each image is 100% of the viewport width
-                    slides.style.transform = `translateX(${offset}%)`;
+                    const offset = currentIndex * -130; // Each image is 100% of the viewport width
+                    slides.style.transform = `translateX(${offset}vh)`;
                 }
                 currentIndex = (currentIndex + 1) % images.length; // Loop through images
             };
