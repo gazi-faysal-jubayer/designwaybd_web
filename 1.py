@@ -43,9 +43,10 @@ def generate_html(input_text):
     return html
 
 # Example input
-input_text = """Client: Zakaria Hossain
-Details: 2 Storied, 2000 S.ft.
-Location: Ullahpara, Sirajganj"""
+input_text = """Project: City Park
+Client: Shahidul and Others
+Details: Basement+16 Storied, 27,494 S.ft.
+Location: Baipail, Ashulia, Dhaka-1344"""
 
 # Generate HTML
 html_output = generate_html(input_text)
