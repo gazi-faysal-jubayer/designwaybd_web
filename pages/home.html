@@ -1,69 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Animated Slideshow</title>
+    <title>Design Way Engineering Consultant</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
     <style>
-        /* Global Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        body, html {
+        body,
+        html {
             width: 100%;
             height: 100%;
             font-family: "Poppins", Arial, sans-serif;
             background-color: #000;
             color: #f5f5f5;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
+            overflow-x: hidden;
         }
 
-        /* Container */
         .container {
             position: relative;
             width: 100%;
-            height: 100vh;
-            overflow: hidden;
+            min-height: 100vh;
         }
 
-        /* Heading with text shadow */
+        /* Logo Styling */
+        .logo-container {
+            display: none;
+            /* Hidden by default */
+        }
+
+        /* Page Heading */
         .page-heading {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 2;
-            font-size: 3em;
-            color: #f5f5f5;
-            text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7);
             text-align: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            padding: 10px 0;
+            font-size: 2.5em;
         }
 
         /* Slideshow Container */
         .slideshow-container {
             width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
+            height: 70vh;
+            position: relative;
             overflow: hidden;
-            z-index: 1;
         }
 
         .slideshow-container img {
-            height: 100%;              
-            width: auto;               
-            object-fit: cover;         
+            width: auto;
+            height: 100%;
+            object-fit: cover;
             position: absolute;
-            top: 0;                    
-            left: 50%;                 
-            transform: translateX(-50%); 
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             opacity: 0;
             transition: opacity 1s ease-in-out;
         }
@@ -71,11 +69,98 @@
         .slideshow-container img.active {
             opacity: 1;
         }
+
+        /* Description Container */
+        .description-container {
+            width: 100%;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: relative;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .description {
+            max-width: 800px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+            position: absolute;
+            padding: 0 15px;
+        }
+
+        .description.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .logo-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 15px 0;
+                background-color: rgba(0, 0, 0, 0.7);
+            }
+
+            .logo {
+                max-width: 100px;
+                height: auto;
+            }
+
+            .page-heading {
+                font-size: 1.5em;
+            }
+
+            .slideshow-container {
+                height: 45vh;
+            }
+
+            .slideshow-container img {
+                width: 100%;
+                height: auto;
+            }
+
+            .description h3 {
+                font-size: 1.2em;
+            }
+
+            .description p {
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-heading {
+                font-size: 1.2em;
+            }
+
+            .slideshow-container {
+                height: 40vh;
+            }
+
+            .description h3 {
+                font-size: 1em;
+            }
+
+            .description p {
+                font-size: 0.8em;
+            }
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
+        <div class="logo-container">
+            <img src="../images/logo.svg" alt="Design Way Engineering Consultant Logo" class="logo">
+        </div>
+
         <h2 class="page-heading">DESIGN WAY ENGINEERING CONSULTANT</h2>
+
         <div class="slideshow-container">
             <img src="../images/Home-Animation/1.jpg" alt="Slide 1" class="active">
             <img src="../images/Home-Animation/2.jpg" alt="Slide 2">
@@ -84,22 +169,71 @@
             <img src="../images/Home-Animation/5.jpg" alt="Slide 5">
             <img src="../images/Home-Animation/6.jpg" alt="Slide 6">
         </div>
+
+        <div class="description-container">
+            <div class="description active" data-slide="0">
+                <h3>Jakia Afroz & Others's Tower</h3>
+                <p> <b>Client:</b> Jakia Afroz & Others <br>
+                    <b>Details:</b>Basement +16 Storied-8942 S.ft. <br>
+                    <b>Location</b>Pallibiddyut, Ashulia, Dhaka-1344
+                </p>
+            </div>
+            <div class="description" data-slide="1">
+                <h3>RMST Tower</h3>
+                <p>
+                    <b>Client:</b> Md. Saiful Islam<br>
+                    <b>Details:</b> 13 Storied, 9950 S.Ft.<br>
+                    <b>Location</b>Baipail, Ashulia, Savar, Dhaka-1344</p>
+            </div>
+            <div class="description" data-slide="2">
+                <h3>Munshi Market</h3>
+                <p><b>Client</b> MD. Abdur Razzak Munshi<br>
+                    <b>Details:</b> 10 Storied, 5000 S.Ft.<br>
+                    <b>Location</b> Charabag Stand, Ashulia, Dhaka-1344</p>
+            </div>
+            <div class="description" data-slide="3">
+                <h3>Masjid-E-Rabeya</h3>
+                <p><b>Client</b> Mohammad Alauddin<br>
+                    <b>Details:</b> 15 Bigha, Masque with 233 Gambuj, Graveyard, Old home, Eye hospital for free treatment, orphanag<br>
+                    <b>Location</b> Dhamrai</p>
+            </div>
+            <div class="description" data-slide="4">
+                <h3>Hilton Tower</h3>
+                <p><b>Client</b> Mrs. Mariam Nesa and Others<br>
+                    <b>Details:</b> Basement+15 Storied, 12,000 S.Ft.<br>
+                    <b>Location</b> Officer’s Housing, Ashulia, Dhaka-1344</p>
+            </div>
+            <div class="description" data-slide="5">
+                <h3>City Park</h3>
+                <p><b>Client</b> Shahidul and Others<br>
+                    <b>Details:</b> Basement+16 Storied, 27,494 S.ft.<br>
+                    <b>Location</b> Baipail, Ashulia, Dhaka-1344</p>
+            </div>
+        </div>
     </div>
 
     <script>
-        // JavaScript for dynamic slideshow
         let currentIndex = 0;
         const slides = document.querySelectorAll('.slideshow-container img');
+        const descriptions = document.querySelectorAll('.description');
         const totalSlides = slides.length;
 
         function showNextSlide() {
+            // Remove active class from current slide and description
             slides[currentIndex].classList.remove('active');
+            descriptions[currentIndex].classList.remove('active');
+
+            // Move to next slide
             currentIndex = (currentIndex + 1) % totalSlides;
+
+            // Add active class to new slide and description
             slides[currentIndex].classList.add('active');
+            descriptions[currentIndex].classList.add('active');
         }
 
         // Change slide every 4 seconds
         setInterval(showNextSlide, 4000);
     </script>
 </body>
+
 </html>
